@@ -1,0 +1,43 @@
+:root{--bg:#faf6ef;--paper:#f2ebde;--ink:#2b2119;--muted:#6b5a4a;--wood:#8a5a2b;--wood-d:#5e3b1a;--line:#e2d6c3;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 Georgia,"Iowan Old Style","Palatino Linotype",serif}
+h1,h2,h3{font-family:"Helvetica Neue",Arial,sans-serif;line-height:1.2;letter-spacing:-.01em;margin:0 0 .6em}
+h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:700}h2{font-size:clamp(1.6rem,3.5vw,2.3rem)}h3{font-size:1.15rem}
+p{margin:0 0 1em}a{color:var(--wood-d)}img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:9}
+header.top{position:sticky;top:0;z-index:5;background:rgba(250,246,239,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:15px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;color:var(--ink)}.brand img{width:40px;height:40px;border-radius:50%}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}nav a{text-decoration:none;color:var(--ink)}nav a:hover{color:var(--wood)}
+.lang{border:1px solid var(--ink);border-radius:99px;padding:4px 12px;text-decoration:none;color:var(--ink)}
+.hero{padding:72px 0 64px}.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero .logo{width:min(360px,80%);margin:0 auto;border-radius:24px}
+.eyebrow{font:600 13px/1 "Helvetica Neue",Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--wood);margin-bottom:16px}
+.lead{font-size:1.2rem;color:var(--muted);max-width:34em}
+.btn{display:inline-block;background:var(--wood-d);color:#fff;padding:14px 26px;border-radius:99px;text-decoration:none;font:600 16px "Helvetica Neue",Arial,sans-serif;margin:8px 10px 0 0}
+.btn.ghost{background:none;color:var(--wood-d);border:1.5px solid var(--wood-d)}.btn:hover{opacity:.9}
+section{padding:80px 0}section.alt{background:var(--paper)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.two img{border-radius:14px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px}
+.card{background:var(--bg);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%}.card div{padding:18px 20px}.card p{font-size:16px;color:var(--muted);margin:0}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:32px 0}
+.gallery figure{margin:0}.gallery img{border-radius:12px;width:100%;aspect-ratio:16/10;object-fit:cover}
+
+figcaption{font-size:14px;color:var(--muted);margin-top:6px;font-family:"Helvetica Neue",Arial,sans-serif}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.feat ul{padding-left:1.1em}.feat li{margin-bottom:.4em}
+.video{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.price{font:600 1.1rem "Helvetica Neue",Arial,sans-serif;color:var(--wood-d);border-left:3px solid var(--wood);padding-left:14px;margin-top:24px}
+ol.steps{list-style:none;padding:0;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;margin-top:32px}
+ol.steps li{counter-increment:s;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:22px;font-size:16px}
+ol.steps li::before{content:counter(s);display:block;font:700 2rem "Helvetica Neue",Arial,sans-serif;color:var(--wood);margin-bottom:8px}
+.contact{text-align:center}.contact .big{font:600 clamp(1.2rem,3vw,1.6rem) "Helvetica Neue",Arial,sans-serif;display:block;margin:6px 0;text-decoration:none}
+.social{display:flex;gap:14px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+footer{background:var(--ink);color:#d9cbb6;padding:32px 0;font:15px "Helvetica Neue",Arial,sans-serif}footer a{color:#f2e3c9}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:900px){nav ul{display:none}.hero .wrap,.two,.feat{grid-template-columns:1fr}.hero{padding:40px 0}.hero .logo{width:220px;order:-1}
+.cards{grid-template-columns:1fr 1fr}ol.steps{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}section{padding:56px 0}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}body{font-size:17px}}
